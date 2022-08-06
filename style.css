@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --margenLados--: 60px;
+    --miquel--: #777;
+    --naty--: #66f;
+}
+
+body{
+    font-size: .9em;
+    color: #fff;
+    background: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.carga{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    background: rgba(170, 170, 255, .5);
+    transform: scale(1);
+}
+
+.carga img{
+    animation: rotacion 4s infinite ease forwards;
+    width: 200px;
+}
+
+.carga_activo{
+    transform: scale(0);
+}
+
+@keyframes rotacion {
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ------------------------------------------------------------ */
+
+
+header{
+    width: 90%;
+    margin: auto;
+    border-top: 7px solid var(--miquel--);
+    border-right: 7px solid var(--naty--);
+    border-bottom: 7px solid var(--miquel--); 
+    border-left: 7px solid var(--naty--);
+    border-radius: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--miquel--), 0 0 5px var(--miquel--), 
+    0 0 10px var(--miquel--),  0 0 10px var(--miquel--);
+    box-shadow: 0 0 5px var(--naty--), 0 0 15px var(--naty--), inset 0 0 5px var(--naty--), 
+    inset 0 0 15px var(--naty--),
+    0 0 25px var(--naty--), 0 0 35px var(--naty--), 
+    inset 0 0 25px var(--naty--), inset 0 0 35px var(--naty--);
+    padding: 1.5em 2em;
+    position: relative;
+    margin-bottom: 2em;
+    font-size: 1.7em;
+    margin-top: 2em;
+}
+header h1{
+    font-size: 1.3em;
+    padding: 1em 0;
+    text-align: center;
+}
+header img{
+    width: 80px;
+}
+header .abajo{
+    position: absolute;
+    transform: translateY(-10%) translateX(-10%);
+    top: 0;
+    left: 0;
+}
+header .ariba{
+    transform: translateY(10%) translateX(10%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+header p{
+    font-size: 1em;
+    text-shadow: 0 0 5px var(--naty--), 0 0 5px var(--naty--), 
+    0 0 10px var(--naty--),  0 0 10px var(--naty--);
+}
+
+
+
+/* ------------------------------------------------------------ */
+
+.conte{
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+}
+.c{
+    font-size: 1.35em;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--naty--), 0 0 15px var(--naty--), inset 0 0 5px var(--naty--),
+    inset 0 0 15px var(--naty--),
+    0 0 25px var(--naty--), 0 0 35px var(--naty--), 
+    inset 0 0 25px var(--naty--), inset 0 0 35px var(--naty--);
+    margin: 3em 0;
+    padding: 3em 1.6em;
+    height: 350px;
+}
+
+.c h2{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.c p{
+    padding: .8em 0;
+}
+
+.c_l h2{
+    text-shadow: 0 0 5px var(--naty--), 0 0 5px var(--naty--), 
+    0 0 10px var(--naty--),  0 0 10px var(--naty--);
+}
+.c_r h2{
+    text-shadow: 0 0 5px var(--miquel--), 0 0 5px var(--miquel--)
+    , 0 0 10px var(--miquel--),  0 0 10px var(--miquel--);
+}
+
+.c img{
+    height: 95%;
+    width: auto;
+}
+
+/* ------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------ */
+
+.i_con{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0 5px;
+}
+
+.c_l .i_con{
+    border-radius: 10px;
+    border-left: 10px solid var(--miquel--);
+}
+.c_r .i_con{
+    border-radius: 10px;
+    border-right: 10px solid var(--naty--);
+}
+
+.pa{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.pa::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+.i_con::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+/* ------------------------------------------------------------ */
+
+
+
+.c_l{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(calc(-1 * var(--margenLados--)));
+    padding-left: calc(10px + var(--margenLados--));
+    border: 7px solid #fff;
+    box-shadow: 0 0 5px var(--naty--), 0 0 15px var(--naty--), inset 0 0 5px var(--naty--), 
+    inset 0 0 15px var(--naty--),
+    0 0 25px var(--naty--), 0 0 35px var(--naty--), 
+    inset 0 0 25px var(--naty--), inset 0 0 35px var(--naty--);
+    text-shadow: 0 0 5px var(--miquel--), 0 0 5px var(--miquel--), 0 0 10px var(--miquel--),  0 0 10px var(--miquel--);
+}
+.c_l:hover{
+    transition: .1s ease;
+    transform: scale(1.01) translateX(calc(-1*var(--margenLados--)));
+}
+
+/* ------------------------------------------------------------ */
+
+.c_l_img{
+    transition: .2s ease;
+    position: relative;
+    transform: translateX(-100px);
+}
+.c_l .pa{
+    padding-left: .9em;
+    transition: .2s ease;
+    transform: translateX(-120%);
+    position: absolute;   
+}
+
+.c_l_img_activa{
+    transform: translateX(-120%) !important;
+    position: absolute;
+}
+.c_l_pa_activo{
+    position: relative;
+    transform: translateX(0) !important;
+}
+
+
+/* ------------------------------------------------------------ */
+
+
+.c_r{
+    transform: translateX(var(--margenLados--));
+    padding-right: calc(10px + var(--margenLados--));
+    border: 7px solid #fff;
+    box-shadow: 0 0 5px var(--miquel--), 0 0 15px var(--miquel--), 
+    inset 0 0 5px var(--miquel--), inset 0 0 15px var(--miquel--),
+    0 0 25px var(--miquel--), 0 0 35px var(--miquel--), inset 0 0 25px var(--miquel--), 
+    inset 0 0 35px var(--miquel--);
+    text-shadow: 0 0 5px var(--naty--), 0 0 5px var(--naty--), 0 0 10px var(--naty--),  0 0 10px var(--naty--);
+}
+.c_r > *{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.c_r:hover{
+    transition: .1s ease;
+    transform: scale(1.01) translateX(calc(var(--margenLados--)));
+}
+
+/* ------------------------------------------------------------ */
+
+.c_r_img{
+    transition: .2s ease;
+    position: relative;
+    transform: translateX(100px);
+}
+.c_r .pa{
+    padding-left: .9em;
+    transition: .2s ease;
+    transform: translateX(120%);
+    position: absolute;
+}
+
+.c_r_img_activa{
+    transform: translateX(120%) !important;
+    position: absolute;
+}
+.c_r_pa_activo{
+    position: relative;
+    transform: translateX(0)!important;
+}
+/* ------------------------------------------------------------ */
+
+
+img{
+    border-radius: 10px;
+}
+
+.c_img_all{
+    transition: .4s ease;
+    transform: translateX(0);
+}
+
+/* ------------------------------------------------------------ */
+
+@media screen and (max-width: 670px) {
+    .conte{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 570px) {
+    header{
+        padding: 1.2em 2em;
+        position: relative;
+        top: 0;
+    }
+    body{
+        font-size: .85em;
+    }
+    header img{
+        width: 70px;
+    }
+    img{
+        width: 120px;
+    }
+    .c{
+        width: 100%;
+        height: 300px;
+        padding: 2em 0;
+    }
+    .i_con{
+        padding: 0 .1em;
+    }
+    .c_l{
+        padding-left: calc(5px + var(--margenLados--));
+    }
+    .c_r{
+        padding-right: calc(5px + var(--margenLados--));
+        margin-right: calc(100px + var(--margenLados--));
+    }
+    .c_r .c_r_pa_activo{
+        padding-right: 0 !important;
+    }
+}
+
+.caruzel{
+    overflow-x: scroll;
+    padding-bottom: 3em;
+    margin-top: 2em;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    
+}
+
+
+
+.caruzel > div {
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+
+    animation: caruzel 9s infinite alternate ease-in-out;
+}
+.caruzel::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+@keyframes caruzel {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateX(-180%);
+    }
+}
+
+
+.caruzel img{
+    width: 80vw;
+    display: block;
+    margin: 0 1em;
+}
+@media screen  and (min-width: 800px){
+    .caruzel img{
+        width: 60vw;
+    }
+}
+
+
+.z_2{
+    width: 60%;
+    display: block;
+    margin: 1em auto;
+    animation: z_2 .6s infinite alternate ease-in-out;
+}
+
+@keyframes z_2 {
+    0%{
+        transform: scale(.9);
+    }
+    25%{
+        transform: rotate(2deg);
+    }
+    50%{
+        transform: rotate(-4deg);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
